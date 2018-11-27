@@ -17,10 +17,14 @@
 \ProvidesClass{proposalnsf}[2008/06/01 NSF proposal style v1.3 SGLS]
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions
-\LoadClass[11pt]{article}
+\LoadClass[10pt]{article}
 \RequirePackage{calc}
-\RequirePackage{natbib}
-\RequirePackage{mathpazo}
+% This is reviewer-friendly (can switch back to numbers if space is needed)
+\RequirePackage[round,sort]{natbib}
+\bibliographystyle{plainnat}
+% Palatino font 10pt / alternatives Times 11pt (minimum, remove linespread)
+\RequirePackage[sc]{mathpazo}
+\linespread{1}
 \setlength{\paperheight}{11in}
 \setlength{\paperwidth}{8.5in}
 \addtolength{\voffset}{-1in}
@@ -48,3 +52,7 @@
 
 %\def\@makefnmark{\hbox{$^{\fnsymbol{\@mpfn}}\m@th$}}
 \renewcommand\floatpagefraction{.9}
+
+% ligatures disabled
+\usepackage{microtype}
+\DisableLigatures[f]{encoding = *, family = * }

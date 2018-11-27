@@ -1,12 +1,11 @@
-\documentclass{nsf_proposal}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % LaTeX template to generate an NSF proposal
 %
-% First version by: Stefan Llewellyn Smith, Sarah Gille, others.
-%
-% Additions by: Ronni Grapenthin, New Mexico Tech.
-%
-% This version maintained/modified by: Jeremy A. Gibbs, Univ. of Utah
+% CONTRIBUTORS:
+% - Stefan Llewellyn Smith, Sarah Gille, others (first version),
+% - Ronni Grapenthin, New Mexico Tech,
+% - Jeremy A. Gibbs, Univ. of Utah,
+% - Giovanni Luca Ciampaglia, University of South Florida (current).
 %
 % This template is free source code. It comes without any warranty, to 
 % the extent permitted by applicable law. You can redistribute it and/or 
@@ -14,8 +13,11 @@
 % License, Version 2, as published by Sam Hocevar. See 
 % http://www.wtfpl.net for more details.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage{longtable}
-\usepackage[latin1]{inputenc}
+\ProvidesPackage{nsfglc}
+
+\usepackage{parskip}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
 \usepackage[amssymb]{SIunits}
 \usepackage{latexsym}
 \usepackage{multirow}
@@ -25,35 +27,52 @@
 \usepackage[format=plain,indention=0cm, font=small, labelfont=bf]{caption}
 \usepackage{fancyhdr}
 \usepackage[pdftex]{graphicx}
-\usepackage[pdftex,
-	    colorlinks, 	
-	    pdfstartview=FitH,
-	    linkcolor=black,
-	    citecolor=black,
-	    urlcolor=black,
-	    filecolor=black
-	    ]{hyperref}
+\usepackage{breakcites}
+\usepackage[pdftex,breaklinks=true]{hyperref}
 \usepackage{lscape}
 \usepackage[T1]{fontenc}
 \usepackage{floatrow}
 \usepackage{enumerate}
 \usepackage{enumitem}
+\usepackage[document]{ragged2e}
+
+% TABLES
+\usepackage{booktabs}
+\usepackage{longtable}
 \usepackage{tabularx}
-\usepackage{ragged2e}
+% For project activity table
 \newcolumntype{Y}{ >{\RaggedRight\arraybackslash}X}
 \newcommand\T{\rule{0pt}{2.6ex}}      
 \newcommand\B{\rule[-1.2ex]{0pt}{0pt}}
-\RequirePackage{color}
+
+% COLORS
+\RequirePackage[usenames,dvipsnames]{color,xcolor}
 \definecolor{RED}{rgb}{1,0,0}
 \definecolor{BLUE}{rgb}{0,0,1}
 \definecolor{White}{rgb}{1,1,1}
+
+% Nice underlines with \ul, \ulemph
+\definecolor{dark-gray}{gray}{0.25}
+\usepackage{soul}
+\setuldepth{a}
+\setulcolor{dark-gray}
+\newcommand{\ulemph}[1]{%
+\emph{\ul{#1}}}
+
+% TODO markers
 \providecommand{\TODO}[1]{{\protect\color{red}\noindent {\bf [TODO]}\emph{#1} {\bf [/TODO]}}}
 \providecommand{\todo}[1]{{\protect\color{red}\noindent {\bf [TODO]}\emph{#1} {\bf [/TODO]}}}
 \providecommand{\CHECK}[1]{{\protect\color{blue} #1 (check) }}
 \providecommand{\DummyText}[1]{{\protect\color{white} #1}}
+
 \renewcommand{\refname}{References Cited}
 \newcommand{\degrees}{$\!\!$\char23$\!$}
 \def\rrr#1\\{\par
 \medskip\hbox{\vbox{\parindent=2em\hsize=6.12in
 \hangindent=4em\hangafter=1#1}}}
 \def\baselinestretch{1}
+
+% path to figures
+\graphicspath{{./figures/}}
+
+
