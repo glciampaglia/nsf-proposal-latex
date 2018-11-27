@@ -15,41 +15,34 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ProvidesPackage{nsfglc}
 
-\usepackage{parskip}
-\usepackage[utf8]{inputenc}
+% FONTS
 \usepackage{textcomp}
-\usepackage[amssymb]{SIunits}
-\usepackage{latexsym}
-\usepackage{multirow}
-\usepackage{wrapfig}
-\usepackage{amsmath, amsthm, amssymb}
-\usepackage{amsfonts}
-\usepackage[format=plain,indention=0cm, font=small, labelfont=bf]{caption}
-\usepackage{fancyhdr}
-\usepackage[pdftex]{graphicx}
-\usepackage{breakcites}
-\usepackage[pdftex,breaklinks=true]{hyperref}
-\usepackage{lscape}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{floatrow}
-\usepackage{enumerate}
-\usepackage{enumitem}
+
+% TEXT/PARAGRAPH LAYOUT
+\usepackage{parskip}
 \usepackage[document]{ragged2e}
+\usepackage{enumerate}
+
+% MISC
+\usepackage[format=plain,indention=0cm, font=small, labelfont=bf]{caption}
+% \usepackage{fancyhdr}
+
+% FIGURES, GRAPHICS
+\usepackage[pdftex]{graphicx}
+\usepackage{wrapfig}
+\graphicspath{{./figures/}}
+
+% MATH
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+\usepackage[amssymb]{SIunits}
 
 % TABLES
 \usepackage{booktabs}
-\usepackage{longtable}
-\usepackage{tabularx}
-% For project activity table
-\newcolumntype{Y}{ >{\RaggedRight\arraybackslash}X}
-\newcommand\T{\rule{0pt}{2.6ex}}      
-\newcommand\B{\rule[-1.2ex]{0pt}{0pt}}
 
 % COLORS
 \RequirePackage[usenames,dvipsnames]{color,xcolor}
-\definecolor{RED}{rgb}{1,0,0}
-\definecolor{BLUE}{rgb}{0,0,1}
-\definecolor{White}{rgb}{1,1,1}
 
 % Nice underlines with \ul, \ulemph
 \definecolor{dark-gray}{gray}{0.25}
@@ -59,20 +52,7 @@
 \newcommand{\ulemph}[1]{%
 \emph{\ul{#1}}}
 
-% TODO markers
-\providecommand{\TODO}[1]{{\protect\color{red}\noindent {\bf [TODO]}\emph{#1} {\bf [/TODO]}}}
-\providecommand{\todo}[1]{{\protect\color{red}\noindent {\bf [TODO]}\emph{#1} {\bf [/TODO]}}}
-\providecommand{\CHECK}[1]{{\protect\color{blue} #1 (check) }}
-\providecommand{\DummyText}[1]{{\protect\color{white} #1}}
-
 \renewcommand{\refname}{References Cited}
-\newcommand{\degrees}{$\!\!$\char23$\!$}
-\def\rrr#1\\{\par
-\medskip\hbox{\vbox{\parindent=2em\hsize=6.12in
-\hangindent=4em\hangafter=1#1}}}
-\def\baselinestretch{1}
 
-% path to figures
-\graphicspath{{./figures/}}
-
-
+% PDF support (better to load it last)
+\usepackage[pdftex,breaklinks=true]{hyperref}

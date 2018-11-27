@@ -21,6 +21,7 @@
 \RequirePackage{calc}
 % This is reviewer-friendly (can switch back to numbers if space is needed)
 \RequirePackage[round,sort]{natbib}
+\RequirePackage{breakcites}
 \bibliographystyle{plainnat}
 % Palatino font 10pt / alternatives Times 11pt (minimum, remove linespread)
 \RequirePackage[sc]{mathpazo}
