@@ -1,18 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% LaTeX template to generate an NSF proposal
-%
-% First version by: Stefan Llewellyn Smith, Sarah Gille, others.
-%
-% Additions by: Ronni Grapenthin, New Mexico Tech.
-%
-% This version maintained/modified by: Jeremy A. Gibbs, Univ. of Utah
-%
-% This template is free source code. It comes without any warranty, to 
-% the extent permitted by applicable law. You can redistribute it and/or 
-% modify it under the terms of the Do What The Fuck You Want To Public 
-% License, Version 2, as published by Sam Hocevar. See 
-% http://www.wtfpl.net for more details.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{proposalnsf}[2008/06/01 NSF proposal style v1.3 SGLS]
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
