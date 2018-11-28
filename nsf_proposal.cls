@@ -11,6 +11,7 @@
 % Palatino font 10pt / alternatives Times 11pt (minimum, remove linespread)
 \RequirePackage[sc]{mathpazo}
 \linespread{1}
+
 \setlength{\paperheight}{11in}
 \setlength{\paperwidth}{8.5in}
 \addtolength{\voffset}{-1in}
@@ -36,9 +37,49 @@
 \cfoot{\thepage}
 \rfoot{}
 
-%\def\@makefnmark{\hbox{$^{\fnsymbol{\@mpfn}}\m@th$}}
-\renewcommand\floatpagefraction{.9}
-
 % ligatures disabled
 \usepackage{microtype}
 \DisableLigatures[f]{encoding = *, family = * }
+
+% FONTS
+\usepackage{textcomp}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% TEXT/PARAGRAPH LAYOUT
+\usepackage{parskip}
+\usepackage[document]{ragged2e}
+\usepackage{enumerate}
+
+% MISC
+\usepackage[format=plain,indention=0cm, font=small, labelfont=bf]{caption}
+% \usepackage{fancyhdr}
+
+% FIGURES, GRAPHICS
+\usepackage[pdftex]{graphicx}
+\usepackage{wrapfig}
+\graphicspath{{./figures/}}
+
+% MATH
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+\usepackage[amssymb]{SIunits}
+
+% TABLES
+\usepackage{booktabs}
+
+% COLORS
+\RequirePackage[usenames,dvipsnames]{color,xcolor}
+
+% Nice underlines with \ul, \ulemph
+\definecolor{dark-gray}{gray}{0.25}
+\usepackage{soul}
+\setuldepth{a}
+\setulcolor{dark-gray}
+\newcommand{\ulemph}[1]{%
+\emph{\ul{#1}}}
+
+\renewcommand{\refname}{References Cited}
+
+% PDF support (better to load it last)
+\usepackage[pdftex,breaklinks=true]{hyperref}
+% vim:set ft=tex:
