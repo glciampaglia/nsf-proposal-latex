@@ -37,14 +37,13 @@
 \cfoot{\thepage}
 \rfoot{}
 
-% ligatures disabled
-\usepackage{microtype}
-\DisableLigatures[f]{encoding = *, family = * }
-
 % FONTS
 \usepackage{textcomp}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+% disable ligatures
+\usepackage{microtype}
+\DisableLigatures[f]{encoding = *, family = * }
 
 % TEXT/PARAGRAPH LAYOUT
 \usepackage{parskip}
