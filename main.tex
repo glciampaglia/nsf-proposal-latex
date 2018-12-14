@@ -3,10 +3,13 @@
 % This may be removed
 \usepackage{lipsum}
 
-% \date{}
-% \title{\vspace{-40pt}Project Description\vspace{-40pt}}
+\title{\vspace{-40pt}
+\normalsize\textbf{DCL: SaTC: Early-Stage Interdisciplinary Collaboration: Collaborative Research: Socio-Algorithmic Newsfeed Interventions} 
+\vspace{-40pt}}
 
 \begin{document}
+
+\include{checklist}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SINGLE PAGE DOCUMENTS
@@ -49,16 +52,16 @@
 \newpage
 \pagenumbering{arabic}
 \renewcommand{\thepage}{E--\arabic{page}}
-\bibliography{references}
+\bibliography{references-giovanni,references-fil,references-giovanni-personal}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % F - BIOGRAPHICAL SKETCHES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-\pagenumbering{arabic}
-\renewcommand{\thepage} {F--\arabic{page}}
-\include{f-bio_person1}
-\include{f-bio_person2}
+% \newpage
+% \pagenumbering{arabic}
+% \renewcommand{\thepage} {F--\arabic{page}}
+% \include{f-bio_person1}
+% \include{f-bio_person2}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % G - BUDGET JUSTIFICATION
@@ -100,13 +103,29 @@
 \include{j-data}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% J - POSTDOC MENTORING PLAN
+% H - POSTDOC MENTORING PLAN
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Commented by default.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\newpage
 %\pagenumbering{arabic}
-%\renewcommand{\thepage} {J--\arabic{page}}
-%\noindent{\Large \bf POSTDOCTORAL MENTORING PLAN}
+%\renewcommand{\thepage} {H--\arabic{page}}
+%\include{h-postdoc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% K - LIST OF PROJECT PERSONNEL
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\pagenumbering{arabic}
+\renewcommand{\thepage} {K--\arabic{page}}
+\include{k-personnel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% L - COLLABORATION PLAN
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\pagenumbering{arabic}
+\renewcommand{\thepage} {L--\arabic{page}}
+\include{l-collaboration}
 
 \end{document}
