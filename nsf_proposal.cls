@@ -115,3 +115,8 @@
 \newcommand{\fix}[1]{\textcolor{red}{FIX: [}{#1}\textcolor{red}{ ]}}
 %\newcommand{\comment}[1]{\textcolor{blue}{COMMENT:}{#1}}
 \newcommand{\ignore}[1]{\textcolor{blue}{IGNORE: }{\sout{#1}}}
+
+% LIPSUM
+% Show lipsum text in red, helpful for spacing the document.
+\RequirePackage{lipsum}
+\SetLipsumParListItemStart{\color{red}}
