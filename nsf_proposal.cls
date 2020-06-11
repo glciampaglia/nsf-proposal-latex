@@ -99,6 +99,10 @@
 % title
 \date{}
 \author{}
+\RequirePackage{titling}
+\setlength{\droptitle}{-0.75in}
+% headings
+\RequirePackage[compact]{titlesec}
 % bibliography
 \renewcommand{\refname}{References Cited}
 
